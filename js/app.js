@@ -41,8 +41,7 @@ document.getElementById('button-256').addEventListener('click', function () {
     storageInput("256")
 })
 document.getElementById('button-512').addEventListener('click', function () {
-    storageInput("512")
-    
+    storageInput("512") 
 })
 document.getElementById('button-1').addEventListener('click', function () {
     storageInput("1")
@@ -67,9 +66,7 @@ document.getElementById('free-delivery').addEventListener('click', function () {
 document.getElementById('express-delivery').addEventListener('click', function () {
    getdCharge(false)
 })
-// common price
 
-// console.log(commonNumber);
 // Total calculation
 function getTotal() {
     const commonPrice = document.getElementById('common-price');
@@ -86,6 +83,8 @@ function getTotal() {
     const totalPriceText = totalPrice.innerText;
     const totalNumber = parseInt(totalPriceText);
     totalPrice.innerText = total;
+    const gTotal = document.getElementById('grand-total')
+     gTotal.innerText = total;
     document.getElementById('promo-button').addEventListener('click', function () {
         const promo = document.getElementById('promo-code')
         const promoCode = promo.value;
